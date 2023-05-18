@@ -1,0 +1,27 @@
+.trending{
+    padding-bottom: 15px;
+}
+
+.trending_header{
+    display: flex;
+    align-items: center;
+}
+.b1{
+    margin-left: auto !important;
+    padding: 0px !important;
+    border-radius: 50px !important;
+}
+.h6{
+    color: #76838e;
+    padding-left: 10px;
+}
+.trending_tag{
+    padding-bottom: 2px;
+    padding-left: 10px;
+}
+
+.trending:hover{
+    cursor: pointer;
+    background-color: #eaeff2;
+    border-radius: 5px;
+}

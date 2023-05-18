@@ -1,0 +1,39 @@
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  .log{
+    background-color: var(--twitter-color)!important;
+    border: none !important;
+    color: white !important;
+    font-weight: 500 !important;
+    border-radius: 30px !important;
+    text-transform: inherit !important;
+    height: 30px !important;
+    margin-top: 20px !important;
+    margin-left: 20px !important;
+}
+
+.more{
+    display: flex;
+    flex: .8 !important;
+}
+.more{
+    display: flex;
+    height: 100vh;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.warning > img{
+    height: 200px;
+    width: 200px;
+    animation: fadeIn 5s;
+}
+
+.warning{
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+}

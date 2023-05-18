@@ -1,0 +1,29 @@
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  
+.message{
+    display: flex;
+    flex: .8 !important;
+}
+.warning > img{
+    height: 200px;
+    width: 200px;
+    animation: fadeIn 5s;
+}
+
+.warning{
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.message{
+    display: flex;
+    height: 100vh;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}

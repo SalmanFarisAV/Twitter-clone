@@ -1,0 +1,123 @@
+.btny {
+    padding: 17px 40px;
+    border-radius: 50px;
+    border: 0;
+    background-color: #ffffff;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all .5s ease;
+   }
+   
+   .btny:hover {
+    letter-spacing: 3px;
+    background-color: #1ca2f3;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #6ccbe3 0px 7px 29px 0px;
+   }
+   
+   .btny:active {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+   }
+
+  .form .switch {
+    font-size: 13px;
+  }
+  
+  .form .switch .signup_tog {
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+
+  
+  .input {
+    width: 245px;
+    height: 30px;
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: #e8e8e8;
+    box-shadow: 20px 20px 60px #c5c5c5,
+           -20px -20px 60px #ffffff;
+    transition: 0.3s;
+   }
+   
+   .input:focus {
+    outline-color: #e8e8e8;
+    transform: scale(1.05);
+    background: #e8e8e8;
+    box-shadow: inset 20px 20px 60px #c5c5c5,
+           inset -20px -20px 60px #ffffff;
+    transition: 0.3s;
+   }
+
+   .t{
+    align-self: center;
+    font-size: 50px !important;
+    color: var(--twitter-color);
+}
+.container {
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    max-width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #1ca2f3;
+
+  }
+  
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+  }
+
+  .form .form_front {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(-180deg);
+    padding: 65px 45px;
+    border-radius: 15px;
+    box-shadow: inset 2px 2px 10px rgba(0,0,0,1),
+    inset -1px -1px 5px rgba(255, 255, 255, 0.6);
+    background-color: #fff;
+  }
+  
+  /* .form .form_back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(-180deg);
+    padding: 65px 45px;
+    border-radius: 15px;
+    box-shadow: inset 2px 2px 10px rgba(0,0,0,1),
+    inset -1px -1px 5px rgba(255, 255, 255, 0.6);
+    background-color: #fff;
+  } */
+  
+  .form_details {
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+  }
