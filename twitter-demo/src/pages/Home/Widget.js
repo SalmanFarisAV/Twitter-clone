@@ -4,11 +4,23 @@ import SearchIcon from "@mui/icons-material/Search";
 import { Avatar, Button } from "@mui/material";
 import Trending from "./Trending";
 import Follow from "./Follow";
+import { auth } from "./firebase";
+import { signOut } from "firebase/auth";
 
 import { TwitterTimelineEmbed, TwitterTweetEmbed } from "react-twitter-embed";
 function Widget() {
+  const userSignOut = () => {
+    signOut(auth)
+      .then(() => {
+        console.log("sign out successful");
+      })
+      .catch((error) => console.log(error));
+  };
   return (
     <div className="widget">
+      <Button className="btnj" onClick={userSignOut}>
+        Logout
+      </Button>
       <div className="widgets__input">
         <SearchIcon className="widget__searchicon" />
         <input className="search" placeholder="Search Twitter" type="text" />

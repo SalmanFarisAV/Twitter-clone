@@ -6,7 +6,8 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import { auth } from "../Home/firebase";
 import React, { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+
 // function Login() {
 //   const navigate = useNavigate();
 //   const [email, setEmail] = useState("");
@@ -61,51 +62,140 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 
 function Login() {
   const navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [values, setValues] = useState({
+    name: "",
+    email: "",
+    pass: "",
+  });
+  const [errorMsg, setErrorMsg] = useState("");
+  const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
 
-  const logIn = (e) => {
-    e.preventDefault();
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        console.log(userCredential);
+  const handleSubmissionSignup = () => {
+    if (!values.name || !values.email || !values.pass) {
+      setErrorMsg("Fill all fields");
+      return;
+    }
+    setErrorMsg("");
+
+    setSubmitButtonDisabled(true);
+    createUserWithEmailAndPassword(auth, values.email, values.pass)
+      .then(async (res) => {
+        setSubmitButtonDisabled(false);
+        const user = res.user;
+        await updateProfile(user, {
+          displayName: values.name,
+        });
+        navigate("/");
       })
-      .catch((error) => {
-        console.log(error);
+      .catch((err) => {
+        setSubmitButtonDisabled(false);
+        setErrorMsg(err.message);
       });
   };
+
+  const handleSubmissionLogin = () => {
+    if (!values.email || !values.pass) {
+      setErrorMsg("Fill all fields");
+      return;
+    }
+    setErrorMsg("");
+
+    setSubmitButtonDisabled(true);
+    signInWithEmailAndPassword(auth, values.email, values.pass)
+      .then(async (res) => {
+        setSubmitButtonDisabled(false);
+
+        navigate("/");
+      })
+      .catch((err) => {
+        setSubmitButtonDisabled(false);
+        setErrorMsg(err.message);
+      });
+  };
+
   return (
     <div class="container">
       <input id="signup_toggle" type="checkbox" />
-      <form onSubmit={logIn} class="form">
+      <form class="form">
         <div class="form_front">
           <TwitterIcon className="t" />
           <div class="form_details">Login to Twitter</div>
+
           <input
-            onChange={(e) => setEmail(e.target.value)}
-            value={email}
+            onChange={(event) =>
+              setValues((prev) => ({ ...prev, email: event.target.value }))
+            }
+            type="email"
+            class="input"
+            placeholder="email"
+          />
+
+          <input
+            onChange={(event) =>
+              setValues((prev) => ({ ...prev, pass: event.target.value }))
+            }
+            type="password"
+            class="input"
+            placeholder="Password"
+          />
+
+          <b className="err">{errorMsg}</b>
+          <button
+            disabled={submitButtonDisabled}
+            onClick={handleSubmissionLogin}
+            class="btny"
+          >
+            Login
+          </button>
+          <span class="switch">
+            Don't have an account?
+            <label for="signup_toggle" class="signup_tog">
+              Sign Up
+            </label>
+          </span>
+        </div>
+
+        <div class="form_back">
+          <TwitterIcon className="t" />
+          <div class="form_details">SignUp to Twitter</div>
+          <input
+            onChange={(event) =>
+              setValues((prev) => ({ ...prev, name: event.target.value }))
+            }
+            type="text"
+            class="input"
+            placeholder="Name"
+          />
+          <input
+            onChange={(event) =>
+              setValues((prev) => ({ ...prev, email: event.target.value }))
+            }
             type="email"
             class="input"
             placeholder="email"
           />
           <input
-            onChange={(e) => setPassword(e.target.value)}
-            value={password}
+            onChange={(event) =>
+              setValues((prev) => ({ ...prev, pass: event.target.value }))
+            }
             type="password"
             class="input"
             placeholder="Password"
           />
-          <button onClick={() => navigate("/")} class="btny">
-            Login
+
+          <b className="err">{errorMsg}</b>
+          <button
+            onClick={handleSubmissionSignup}
+            disabled={submitButtonDisabled}
+            class="btny"
+          >
+            Signup
           </button>
+
           <span class="switch">
-            Don't have an account?
-            <label
-              onClick={() => navigate("/signup")}
-              for="signup_toggle"
-              class="signup_tog"
-            >
-              Sign Up
+            Already have an account?
+            <label for="signup_toggle" class="signup_tog">
+              Sign In
             </label>
           </span>
         </div>

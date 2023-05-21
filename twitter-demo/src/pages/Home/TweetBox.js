@@ -1,22 +1,39 @@
 import "./TweetBox.css";
 import { Avatar, Button } from "@mui/material";
 import db from "./firebase";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import firebase from "firebase/compat/app";
-import "firebase/compat/firestore";
 import TextField from "@mui/material/TextField";
+import "firebase/compat/firestore";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "./firebase";
 
-function TweetBox() {
+function TweetBox(props) {
   const [tweetMessage, setTweetMessage] = useState("");
   const [tweetImage, setTweetImage] = useState("");
+  const [authUser, setAuthUser] = useState(null);
+
+  useEffect(() => {
+    const listen = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setAuthUser(user);
+      } else {
+        setAuthUser(null);
+      }
+    });
+
+    return () => {
+      listen();
+    };
+  }, []);
 
   const sendTweet = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
 
     db.collection("posts").add({
-      displayname: "Salman Faris",
+      displayname: authUser.displayName,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-      username: "sal96",
+      username: authUser.email,
       verified: true,
       text: tweetMessage,
       image: tweetImage,

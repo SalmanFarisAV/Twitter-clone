@@ -1,7 +1,6 @@
 import React from "react";
 
 import "./Sidebar.css";
-
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 import TweetBox from "../pages/Home/TweetBox";
@@ -17,6 +16,8 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import LoginIcon from "@mui/icons-material/Login";
 import { Button } from "@mui/material";
+import { auth } from "../pages/Home/firebase";
+import firebase from "firebase/compat/app";
 
 export default function Sidebar({ a1, a2, a3, a4, a5, a6, a7, a8 }) {
   return (
@@ -66,7 +67,8 @@ export default function Sidebar({ a1, a2, a3, a4, a5, a6, a7, a8 }) {
         text="More"
         path="/more"
       />
-      <SidebarOption Icon={LoginIcon} text="Login" path="/login" />
+      <SidebarOption Icon={LoginIcon} text="Logout" path="/login" />
+
       <Button variant="outlined" className="sidebar__tweet">
         Tweet
       </Button>
