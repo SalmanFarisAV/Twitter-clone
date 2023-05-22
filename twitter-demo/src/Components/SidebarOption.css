@@ -9,14 +9,13 @@
     align-items: center;
     color: black;
     background: none;
-    padding: 5px;
+    padding: 3px;
     height: 45px;
 }
 
 .opt:hover{
     background-color: #e8f5fe !important;
     border-radius: 30px;
-    padding: 5px !important;
     color: var(--twitter-color) !important;
     transition: color 100ms ease-out !important;
 }

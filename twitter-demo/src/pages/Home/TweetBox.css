@@ -1,6 +1,6 @@
 .tweetbox{
     padding-bottom: 10px;
-    border-bottom: 8px solid var(--twitter-background);
+    border-bottom: 3px solid var(--twitter-background);
     padding-right: 10px;
 }
 
@@ -40,5 +40,6 @@
     text-transform: inherit !important;
     height: 40px !important;
     margin-left: auto !important;
-    width: 100px !important;
+    width: 80px !important;
 }
+

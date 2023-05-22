@@ -9,19 +9,27 @@ import Profile from "./pages/Profile/Profile";
 import More from "./pages/More/More";
 import { Route, Routes } from "react-router-dom";
 import Login from "./pages/Login/Login";
-import Signup from "./pages/Login/Signup";
 import React, { useEffect, useState } from "react";
 import { auth } from "./pages/Home/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 
 function App() {
   const [userName, setUserName] = useState("");
+  const [proFile, setproFile] = useState("");
 
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user) {
         setUserName(user.displayName);
       } else setUserName("");
+    });
+  }, []);
+
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        setproFile(user.photoURL);
+      } else setproFile("");
     });
   }, []);
 
@@ -47,7 +55,7 @@ function App() {
         <Routes>
           {/* <Route path="signup" element={<Signup />} /> */}
           <Route path="/login" element={<Login />} />
-          <Route path="/" element={<Home name={userName} />} />
+          <Route path="/" element={<Home prof={proFile} name={userName} />} />
           <Route path="explore" element={<Explore />} />
           <Route path="notifications" element={<Notification />} />
           <Route path="messages" element={<Messages />} />

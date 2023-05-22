@@ -1,7 +1,7 @@
 import React from "react";
 import "./Widget.css";
 import SearchIcon from "@mui/icons-material/Search";
-import { Avatar, Button } from "@mui/material";
+import { Button } from "@mui/material";
 import Trending from "./Trending";
 import Follow from "./Follow";
 import { auth } from "./firebase";

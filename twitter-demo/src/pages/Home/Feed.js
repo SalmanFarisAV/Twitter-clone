@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import db from "./firebase";
 import FlipMove from "react-flip-move";
 
-function Feed(props) {
+function Feed({ prof, name }) {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ function Feed(props) {
         <h2>Home</h2>
       </div>
 
-      <TweetBox name={props.name} />
+      <TweetBox prof={prof} name={name} />
 
       <FlipMove>
         {posts.map((post) => (

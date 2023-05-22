@@ -1,0 +1,29 @@
+.profpage{
+    flex: 0.6 !important;
+    border-right: 1px solid var(--twitter-background);
+    
+}
+
+.searchh{
+    text-align: center;
+
+}
+
+
+.inputt {
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 1em;
+    background-color: var(--twitter-background);
+    /* box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3); */
+    transition: 300ms ease-in-out;
+    margin-top: 10px;
+    width: 35em;    
+  }
+  
+  .inputt:focus {
+    background-color: white;
+    transform: scale(1.05);
+    box-shadow: 5px 5px 10px #cbcbcb;
+  }

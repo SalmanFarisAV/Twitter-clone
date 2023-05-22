@@ -62,16 +62,18 @@ import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 
 function Login() {
   const navigate = useNavigate();
+  
   const [values, setValues] = useState({
     name: "",
     email: "",
     pass: "",
+    photoUrl: "",
   });
   const [errorMsg, setErrorMsg] = useState("");
   const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
-
-  const handleSubmissionSignup = () => {
-    if (!values.name || !values.email || !values.pass) {
+  const handleSubmissionSignup = (e) => {
+    e.preventDefault();
+    if (!values.name || !values.email || !values.pass || !values.photoUrl) {
       setErrorMsg("Fill all fields");
       return;
     }
@@ -82,9 +84,12 @@ function Login() {
       .then(async (res) => {
         setSubmitButtonDisabled(false);
         const user = res.user;
+
         await updateProfile(user, {
           displayName: values.name,
+          photoURL: values.photoUrl,
         });
+
         navigate("/");
       })
       .catch((err) => {
@@ -93,7 +98,8 @@ function Login() {
       });
   };
 
-  const handleSubmissionLogin = () => {
+  const handleSubmissionLogin = (e) => {
+    e.preventDefault();
     if (!values.email || !values.pass) {
       setErrorMsg("Fill all fields");
       return;
@@ -181,6 +187,15 @@ function Login() {
             type="password"
             class="input"
             placeholder="Password"
+          />
+
+          <input
+            onChange={(event) =>
+              setValues((prev) => ({ ...prev, photoUrl: event.target.value }))
+            }
+            type="text"
+            class="input"
+            placeholder="Profile Url"
           />
 
           <b className="err">{errorMsg}</b>
