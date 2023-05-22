@@ -1,12 +1,13 @@
 .trending{
     padding-bottom: 15px;
+    
 }
 
 .trending_header{
     display: flex;
     align-items: center;
 }
-.b1{
+.b11{
     margin-left: auto !important;
     padding: 0px !important;
     border-radius: 50px !important;
@@ -22,6 +23,8 @@
 
 .trending:hover{
     cursor: pointer;
-    background-color: #eaeff2;
+    background-color: #f3f3f3 ;
     border-radius: 5px;
+    transition: ease-out 100ms !important;
 }
+/* #eff0f0 */

@@ -1,29 +1,23 @@
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 .profpage{
     flex: 0.6 !important;
     border-right: 1px solid var(--twitter-background);
     
 }
 
-.searchh{
-    text-align: center;
 
+.warningp > img{
+  height: 200px;
+  width: 200px;
+  animation: fadeIn 5s;
 }
 
-
-.inputt {
-    border: none;
-    outline: none;
-    border-radius: 15px;
-    padding: 1em;
-    background-color: var(--twitter-background);
-    /* box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3); */
-    transition: 300ms ease-in-out;
-    margin-top: 10px;
-    width: 35em;    
-  }
+.warningp{
+  text-align: center;
+  margin-top: 200px;
+}
   
-  .inputt:focus {
-    background-color: white;
-    transform: scale(1.05);
-    box-shadow: 5px 5px 10px #cbcbcb;
-  }

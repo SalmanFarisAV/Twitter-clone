@@ -4,23 +4,12 @@ import SearchIcon from "@mui/icons-material/Search";
 import { Button } from "@mui/material";
 import Trending from "./Trending";
 import Follow from "./Follow";
-import { auth } from "./firebase";
-import { signOut } from "firebase/auth";
+
 
 import { TwitterTimelineEmbed, TwitterTweetEmbed } from "react-twitter-embed";
 function Widget() {
-  const userSignOut = () => {
-    signOut(auth)
-      .then(() => {
-        console.log("sign out successful");
-      })
-      .catch((error) => console.log(error));
-  };
   return (
     <div className="widget">
-      <Button className="btnj" onClick={userSignOut}>
-        Logout
-      </Button>
       <div className="widgets__input">
         <SearchIcon className="widget__searchicon" />
         <input className="search" placeholder="Search Twitter" type="text" />
@@ -28,11 +17,23 @@ function Widget() {
       <div className="widgets__container">
         <h2 className="h2">What's happening</h2>
 
-        <Trending head="Trending in India" tag="ViratKohli" tweet="7,365" />
-        <Trending head="Trending in Politics" tag="DKShivakumar" tweet="8160" />
-        <Trending head="Trending" tag="Musk" tweet="513K" />
-        <Trending head="Entertainment·Trending" tag="Don3" tweet="3,749" />
-        <Trending head="Sports·Trending" tag="RRvsRCB" tweet="20.3K" />
+        <Trending
+          head="Trending in India"
+          tag="#ViratKohli"
+          tweet="7,365 Tweets"
+        />
+        <Trending
+          head="Trending in Politics"
+          tag="#DKShivakumar"
+          tweet="8160 Tweets"
+        />
+        <Trending head="Trending" tag="Musk" tweet="513K Tweets" />
+        <Trending
+          head="Entertainment·Trending"
+          tag="#Don3"
+          tweet="3,749 Tweets"
+        />
+        <Trending head="Sports·Trending" tag="#RRvsRCB" tweet="20.3K Tweets" />
         <Button className="bh5">
           <h5>Show more</h5>
         </Button>

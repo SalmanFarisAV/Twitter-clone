@@ -1,17 +1,14 @@
 import React from "react";
 import "./ProfilePage.css";
-import SearchIcon from "@mui/icons-material/Search";
+
 function ProfilePage() {
   return (
     <div className="profpage">
-      <div className="searchh">
-        <input
-          type="text"
-          autocomplete="off"
-          name="text"
-          class="inputt"
-          placeholder="Search Twitter"
-        ></input>
+      <div className="warningp">
+        <h1>Welcome to Profile</h1>
+        <img className="img" src={require("../yw.png")} alt="" />
+        <h2>UNDER MAINTENANCE</h2>
+        <h3>COME BACK SOON</h3>
       </div>
     </div>
   );

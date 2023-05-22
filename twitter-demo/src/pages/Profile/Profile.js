@@ -9,6 +9,7 @@ function Profile() {
     <div className="profile">
       <Sidebar a7={true} />
       <ProfilePage />
+
       <ProfileWidget />
     </div>
   );
