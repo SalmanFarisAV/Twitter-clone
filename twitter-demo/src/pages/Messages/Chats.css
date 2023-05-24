@@ -1,0 +1,10 @@
+.userChat{
+    display: flex;
+    align-items: center;
+}
+.usrlc{
+    font-size: 13px;
+}
+.chats{
+    margin-top: 2px;
+}

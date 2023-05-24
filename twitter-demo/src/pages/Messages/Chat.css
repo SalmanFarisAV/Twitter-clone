@@ -1,0 +1,76 @@
+.chatside{
+    flex: 1;
+    display: flex;
+  flex-direction: column;
+  height: 92%;
+  overflow-y: scroll;
+}
+
+.chatside::-webkit-scrollbar{
+  display: none;
+}
+.chatside{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.chatting {
+    flex-grow: 1;
+
+  }
+  
+.msgsend{
+  position: sticky;
+  bottom: 0;
+  display: flex;
+    align-items: center;
+    background-color: var(--twitter-background);
+    padding: 10px;
+
+    border-radius: 20px 20px 0px 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.msgsend > .msginpt{
+  border: none;
+  outline: none;
+  background-color: var(--twitter-background);
+  width: 38em;
+}
+
+.msgsend >.sendicon:hover{
+  cursor: pointer;
+  background-color: rgb(222, 222, 222);
+  border-radius: 10px;
+}
+
+.chathead{
+    
+    padding: 20px;
+    justify-content: center !important;
+    align-items: center !important;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--twitter-background);
+    border-radius: 10px;
+}
+.chathead:hover{
+    
+    cursor: pointer;
+    
+}
+
+.chathead > h4{
+    font-weight: 500;
+    color: gray;
+}
+/* .chatting{
+    display: flex;
+    justify-content: right;
+} */
+
+
+

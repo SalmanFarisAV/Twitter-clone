@@ -1,0 +1,42 @@
+.msgf {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+  }
+  
+  .msgfeed {
+    padding: 10px 20px;
+    background-color: #eaebeb;
+    border-radius: 20px 20px 3px 20px;
+    font-weight: 600;
+    max-width: max-content;
+    color: rgb(0, 0, 0);
+    margin-top: 10px;
+  }
+
+  /* #1d9bf0 */
+
+  .owner{
+    padding: 10px 20px;
+    background-color: #1d9bf0;
+    border-radius: 20px 20px 3px 20px;
+    font-weight: 600;
+    max-width: max-content;
+    color: white;
+    margin-top: 10px;
+  }
+  
+  .msgtxt {
+    text-align: right;
+  }
+  
+  .msgl{
+    display: flex;
+    flex-direction: row;
+    align-items: center !important;
+  }
+
+  .msgavt{
+    margin-top: 20px !important;
+    margin-left: 10px !important;
+  }

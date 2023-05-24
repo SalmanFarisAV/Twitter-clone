@@ -7,6 +7,8 @@ import { auth } from "../Home/firebase";
 import React, { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { doc, setDoc } from "firebase/firestore";
+import db from "../Home/firebase";
 
 // function Login() {
 //   const navigate = useNavigate();
@@ -62,7 +64,7 @@ import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 
 function Login() {
   const navigate = useNavigate();
-  
+
   const [values, setValues] = useState({
     name: "",
     email: "",
@@ -89,6 +91,15 @@ function Login() {
           displayName: values.name,
           photoURL: values.photoUrl,
         });
+
+        await setDoc(doc(db, "users", res.user.uid), {
+          uid: res.user.uid,
+          displayName: values.name,
+          email: values.email,
+          photoURL: values.photoUrl,
+        });
+
+        await setDoc(doc(db, "userChats", res.user.uid), {});
 
         navigate("/");
       })

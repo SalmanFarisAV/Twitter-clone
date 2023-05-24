@@ -9,11 +9,14 @@ import Profile from "./pages/Profile/Profile";
 import More from "./pages/More/More";
 import { Route, Routes } from "react-router-dom";
 import Login from "./pages/Login/Login";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { auth } from "./pages/Home/firebase";
 import { onAuthStateChanged } from "firebase/auth";
+import { AuthContext } from "./Context/AuthContext";
 
 function App() {
+  const { currentUser } = useContext(AuthContext);
+
   const [userName, setUserName] = useState("");
   const [proFile, setproFile] = useState("");
 
@@ -72,3 +75,4 @@ function App() {
 }
 
 export default App;
+

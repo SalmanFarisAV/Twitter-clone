@@ -1,0 +1,56 @@
+.chat{
+    display: flex;
+    flex: 1;
+   
+}
+
+.users{
+    flex: 0.4 !important;
+    border-right: 1px solid var(--twitter-background);
+}
+
+.chatbox{
+    flex: 0.6 !important;
+    border-right: 1px solid var(--twitter-background);
+}
+
+.userChat{
+    display: flex;
+    align-items: center;
+}
+.userChat:hover{
+    cursor: pointer;
+    background-color: var(--twitter-background);
+    border-radius: 30px;
+}
+
+.usrn{
+
+    font-weight: 500;
+}
+
+.usrp{
+    margin: 20px;
+}
+
+
+.uinput {
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 1em;
+    background-color: var(--twitter-background);
+    /* box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3); */
+    transition: 300ms ease-in-out;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    width: 20em;
+        
+  }
+  
+  .uinput:focus {
+    background-color: white;
+    transform: scale(1.05);
+    box-shadow: 5px 5px 10px #cbcbcb;
+  }
