@@ -67,6 +67,11 @@ const Chat = () => {
     setText("");
   };
 
+
+  const handleKey = (e) => {
+    e.code === "Enter" && handleSend();
+  };
+
   return (
     <div className="chatside">
       <div className="chathead">
@@ -90,6 +95,7 @@ const Chat = () => {
           value={text}
           className="msginpt"
           placeholder="Enter Message"
+          onKeyDown={handleKey}
         />
         {/* <SendIcon className="sendicon" /> */}
         <Button onClick={handleSend} className="sendicon">

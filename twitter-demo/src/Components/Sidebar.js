@@ -16,10 +16,12 @@ import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import LoginIcon from "@mui/icons-material/Login";
 import { Button } from "@mui/material";
 import { auth } from "../pages/Home/firebase";
+import { useNavigate } from "react-router-dom";
 
 import { signOut } from "firebase/auth";
 
 export default function Sidebar({ a1, a2, a3, a4, a5, a6, a7, a8 }) {
+  const navigate = useNavigate();
   const userSignOut = () => {
     signOut(auth)
       .then(() => {
@@ -76,7 +78,13 @@ export default function Sidebar({ a1, a2, a3, a4, a5, a6, a7, a8 }) {
       />
 
       <div className="SidebarOption">
-        <Button onClick={userSignOut} className="sidebutton">
+        <Button
+          onClick={() => {
+            userSignOut();
+            navigate("/login");
+          }}
+          className="sidebutton"
+        >
           <div className="opt">
             <LoginIcon />
             <h2>Logout</h2>

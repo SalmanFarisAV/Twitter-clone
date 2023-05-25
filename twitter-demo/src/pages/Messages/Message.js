@@ -4,36 +4,44 @@ import "./Message.css";
 import { ChatContext } from "../../Context/ChatContext";
 import { AuthContext } from "../../Context/AuthContext";
 
+var condition;
+
 function Message({ message }) {
   const { currentUser } = useContext(AuthContext);
   const { data } = useContext(ChatContext);
   const ref = useRef();
 
+  if (message.senderId === currentUser.uid) {
+    condition = true;
+  } else {
+    condition = false;
+  }
+
   useEffect(() => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   }, [message]);
   return (
-    <div className="msgf">
-      <div className="msgl">
-        <div
-          ref={ref}
-          className={`msgfeed ${
-            message.senderId === currentUser.uid && "owner"
-          }`}
-        >
-          <p className="msgtxt">{message.text}</p>
+    <>
+      {condition ? (
+        <div className="msgf">
+          <div className="msgl">
+            <div ref={ref} className="owner">
+              <p className="msgtxt">{message.text}</p>
+            </div>
+            <Avatar className="msgavt" src={currentUser.photoURL} alt="" />
+          </div>
         </div>
-        <Avatar
-          className="msgavt"
-          src={
-            message.senderId === currentUser.uid
-              ? currentUser.photoURL
-              : data.user.photoURL
-          }
-          alt=""
-        />
-      </div>
-    </div>
+      ) : (
+        <div className="msgfl">
+          <div className="msgll">
+            <Avatar className="msgavtl" src={data.user.photoURL} alt="" />
+            <div ref={ref} className="msgfeedl">
+              <p className="msgtxtl">{message.text}</p>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 

@@ -7,4 +7,14 @@
 }
 .chats{
     margin-top: 2px;
+    overflow-y: scroll;
+    height: 87%;
 }
+
+.chats::-webkit-scrollbar{
+    display: none;
+  }
+  .chats{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }

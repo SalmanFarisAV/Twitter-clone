@@ -1,16 +1,16 @@
 .chat{
     display: flex;
-    flex: 1;
+    flex: 1 !important;
    
 }
 
 .users{
-    flex: 0.4 !important;
+    flex: 0.5 !important;
     border-right: 1px solid var(--twitter-background);
 }
 
 .chatbox{
-    flex: 0.6 !important;
+    flex: 0.5 !important;
     border-right: 1px solid var(--twitter-background);
 }
 
