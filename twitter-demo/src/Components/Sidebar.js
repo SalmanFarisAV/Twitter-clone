@@ -22,6 +22,7 @@ import { signOut } from "firebase/auth";
 
 export default function Sidebar({ a1, a2, a3, a4, a5, a6, a7, a8 }) {
   const navigate = useNavigate();
+
   const userSignOut = () => {
     signOut(auth)
       .then(() => {
@@ -92,7 +93,11 @@ export default function Sidebar({ a1, a2, a3, a4, a5, a6, a7, a8 }) {
         </Button>
       </div>
 
-      <Button variant="outlined" className="sidebar__tweet">
+      <Button
+        onClick={() => navigate("/")}
+        variant="outlined"
+        className="sidebar__tweet"
+      >
         Tweet
       </Button>
       {/* <Popup

@@ -67,7 +67,6 @@ const Chat = () => {
     setText("");
   };
 
-
   const handleKey = (e) => {
     e.code === "Enter" && handleSend();
   };

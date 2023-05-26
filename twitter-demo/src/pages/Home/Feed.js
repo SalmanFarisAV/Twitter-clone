@@ -1,11 +1,11 @@
 import "./Feed.css";
 import TweetBox from "./TweetBox";
 import Post from "./Post";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import db from "./firebase";
 import FlipMove from "react-flip-move";
 
-function Feed({ prof, name }) {
+function Feed({ scrollFunction }) {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ function Feed({ prof, name }) {
         <h2>Home</h2>
       </div>
 
-      <TweetBox prof={prof} name={name} />
+      <TweetBox />
 
       <FlipMove>
         {posts.map((post) => (

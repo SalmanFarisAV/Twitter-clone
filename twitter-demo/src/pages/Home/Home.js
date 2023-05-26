@@ -7,7 +7,7 @@ function App({ prof, name }) {
   return (
     <div className="home">
       <Sidebar a1={true} />
-      <Feed prof={prof} name={name} />
+      <Feed />
       <Widget />
     </div>
   );

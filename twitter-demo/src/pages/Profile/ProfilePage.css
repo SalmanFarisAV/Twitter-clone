@@ -1,23 +1,75 @@
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
+
 
 .profpage{
     flex: 0.6 !important;
     border-right: 1px solid var(--twitter-background);
-    
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-width: 25em;
+}
+
+.profhead{
+  height: 10rem;
+  background: linear-gradient(to right, #00aaff, #00aaff, #00aaff, #ffffff);
+  display: flex;
+  flex-direction: row;
+    align-items: flex-end; 
+    border-radius: 20px 20px 0px 0px;
+}
+
+.profavt{
+  position: absolute;
+  top: 6.5em;
+  left: 4.5em; 
+  transform: translate(-50%, -50%); 
+  z-index: 1;
+  outline: 4px solid white;
 }
 
 
-.warningp > img{
-  height: 200px;
-  width: 200px;
-  animation: fadeIn 5s;
+.proffoot{
+  height: 75%;
+
 }
 
-.warningp{
-  text-align: center;
-  margin-top: 200px;
+.proffoot > h2 {
+  position: absolute;
+  top: 9.2em;
+  left: 1em;
 }
+
+.proffoot > h3 {
+  position: absolute;
+  top: 13.5em;
+  left: 1.2em;
+  font-weight: 450;
+  font-family: 'Lucida Sans';
+}
+
+
+
+
+.updt{
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.nmi{
+  display: flex;
+  align-items: center;
+}
+
+.pic{
+  display: flex;
+  align-items: center;
+}
+
+.protext{
   
+  width: 30rem;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}

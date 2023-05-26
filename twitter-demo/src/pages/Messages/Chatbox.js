@@ -53,6 +53,22 @@ const Chatbox = () => {
     try {
       const res = await getDoc(doc(db, "chats", combinedId));
 
+      await updateDoc(doc(db, "userChats", currentUser.uid), {
+        [combinedId + ".userInfo"]: {
+          uid: user.uid,
+          displayName: user.displayName,
+          photoURL: user.photoURL,
+        },
+      });
+
+      await updateDoc(doc(db, "userChats", user.uid), {
+        [combinedId + ".userInfo"]: {
+          uid: user.uid,
+          displayName: currentUser.displayName,
+          photoURL: currentUser.photoURL,
+        },
+      });
+
       if (!res.exists()) {
         //create a chat in chats collection
         await setDoc(doc(db, "chats", combinedId), { messages: [] });

@@ -10,7 +10,7 @@ import { auth } from "./firebase";
 
 var profile;
 
-function TweetBox({ prof, name }) {
+function TweetBox() {
   const [tweetMessage, setTweetMessage] = useState("");
   const [tweetImage, setTweetImage] = useState("");
   const [authUser, setAuthUser] = useState(null);

@@ -14,22 +14,22 @@ function ProfileWidget() {
           link="https://twitter.com/MrBeast"
         />
         <Follow
-          avatar="https://pbs.twimg.com/profile_images/1406692941804883971/P-si1zT8_400x400.jpg"
-          disname="DMRそPHOENIX"
-          tag="SalmanFarisAV1"
-          link="https://twitter.com/SalmanFarisAV1"
+          avatar="https://pbs.twimg.com/profile_images/1562523305927618561/wbdOmBqz_400x400.jpg"
+          disname="Marvel Studios"
+          tag="MarvelStudios"
+          link="https://twitter.com/MarvelStudios"
         />
         <Follow
-          avatar="https://pbs.twimg.com/profile_images/1562753500726976514/EPSUNyR3_400x400.jpg"
-          disname="Virat Kohli"
-          tag="imVkohli"
-          link="https://twitter.com/imVkohli"
+          avatar="https://pbs.twimg.com/profile_images/1599025506686754816/himIeRAN_400x400.jpg"
+          disname="24 News"
+          tag="i24onlive"
+          link="https://twitter.com/24onlive"
         />
         <Follow
-          avatar="https://i.ibb.co/xXKPyvQ/jv.jpg"
-          disname="Jishnu Vijayan"
-          tag="JishnuVijayan03"
-          link="https://twitter.com/JishnuVijayan03"
+          avatar="https://pbs.twimg.com/profile_images/1659804049993089024/kkdYLpy5_400x400.jpg"
+          disname="Mohanlal"
+          tag="Mohanlal"
+          link="https://twitter.com/Mohanlal"
         />
         <Button className="bh5">
           <h5>Show more</h5>
