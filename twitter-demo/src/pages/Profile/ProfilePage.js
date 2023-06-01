@@ -3,7 +3,7 @@ import "./ProfilePage.css";
 import { Avatar, Button } from "@mui/material";
 import { AuthContext } from "../../Context/AuthContext";
 import TextField from "@mui/material/TextField";
-import { auth } from "../Home/firebase";
+// import { auth } from "../Home/firebase";
 import { updateProfile } from "firebase/auth";
 import { updateDoc, doc } from "firebase/firestore";
 import db from "../Home/firebase";
@@ -22,24 +22,36 @@ function ProfilePage() {
 
   const changeName = async (e) => {
     e.preventDefault();
-    await updateProfile(currentUser, {
-      displayName: values.name,
-    });
-    await updateDoc(doc(db, "users", currentUser.uid), {
-      displayName: values.name,
-    });
-    window.location.reload();
+    if (values.name === "") {
+      alert("Field is Empty!");
+    } else {
+      
+      await updateProfile(currentUser, {
+        displayName: values.name,
+      });
+      await updateDoc(doc(db, "users", currentUser.uid), {
+        displayName: values.name,
+      });
+      window.location.reload();
+    }
   };
 
   const changePic = async (e) => {
     e.preventDefault();
-    await updateProfile(currentUser, {
-      photoURL: values.photoUrl,
-    });
-    await updateDoc(doc(db, "users", currentUser.uid), {
-      photoURL: values.photoUrl,
-    });
-    window.location.reload();
+    if(values.photoUrl === ""){
+      alert("Field is Empty!");
+    }
+    else{
+      
+      await updateProfile(currentUser, {
+        photoURL: values.photoUrl,
+      });
+      await updateDoc(doc(db, "users", currentUser.uid), {
+        photoURL: values.photoUrl,
+      });
+      window.location.reload();
+    }
+    
   };
 
   return (

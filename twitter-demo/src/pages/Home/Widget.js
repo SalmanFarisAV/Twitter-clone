@@ -48,7 +48,7 @@ function Widget() {
           link="https://twitter.com/Suriya_offl"
         />
         <Follow
-          avatar="https://pbs.twimg.com/profile_images/1406692941804883971/P-si1zT8_400x400.jpg"
+          avatar="https://pbs.twimg.com/profile_images/1660745906487185409/bpgD4hqR_400x400.jpg"
           disname="DMRそPHOENIX"
           tag="SalmanFarisAV1"
           link="https://twitter.com/SalmanFarisAV1"
