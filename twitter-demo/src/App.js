@@ -13,6 +13,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { auth } from "./pages/Home/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { AuthContext } from "./Context/AuthContext";
+import Notification2 from "./pages/Notification/Notification2";
 
 function App() {
   const { currentUser } = useContext(AuthContext);
@@ -57,7 +58,8 @@ function App() {
       {authUser ? (
         <Routes>
           {/* <Route path="signup" element={<Signup />} /> */}
-          <Route path="/login" element={<Login />} />
+          <Route path="notifications/verified" element={<Notification2 />} />
+          <Route path="login" element={<Login />} />
           <Route path="/" element={<Home prof={proFile} name={userName} />} />
           <Route path="explore" element={<Explore />} />
           <Route path="notifications" element={<Notification />} />
