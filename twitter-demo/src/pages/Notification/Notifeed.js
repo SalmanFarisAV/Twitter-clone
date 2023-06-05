@@ -3,7 +3,11 @@ import "./Notifeed.css";
 function Notifeed() {
   return (
     <div className="notifeed">
-      <h1>Notification Feed</h1>
+      <div className="warning">
+        <img className="img" src={require("../yw.png")} alt="" />
+        <h2>UNDER MAINTENANCE</h2>
+        <h3>COME BACK SOON</h3>
+      </div>
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import React from "react";
 
 import "./Sidebar.css";
-import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import SidebarOption from "./SidebarOption";
