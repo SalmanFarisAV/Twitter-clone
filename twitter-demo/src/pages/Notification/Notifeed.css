@@ -2,3 +2,10 @@
     flex: 0.6 !important;
     border-right: 1px solid var(--twitter-background);
 }
+.textdecoration {
+    text-decoration-line: underline !important;
+    text-decoration-thickness: 4px !important;
+    text-decoration-color: #1D9BF0 !important;
+    text-underline-offset: 14px;
+    border-radius: 3px;
+}
