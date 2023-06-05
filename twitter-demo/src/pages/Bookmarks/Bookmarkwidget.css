@@ -1,3 +1,9 @@
 .Bookwid{
     flex: 0.4 !important;
+    min-width: fit-content;
+    overflow-y: scroll;
+}
+
+.Bookwid::-webkit-scrollbar{
+    display: none;
 }
