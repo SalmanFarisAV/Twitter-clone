@@ -43,28 +43,36 @@ function Notiwidget() {
       <div className="widgets__container">
         <h2 className="h2">Who to Follow </h2>
         <Follow
-          avatar="https://pbs.twimg.com/profile_images/1286687023185592320/Q1r6FSus_400x400.jpg"
-          disname="Suriya Sivakumar"
-          tag="Suriya_offl"
-          link="https://twitter.com/Suriya_offl"
+          avatar="https://pbs.twimg.com/profile_images/1590968738358079488/IY9Gx6Ok_400x400.jpg"
+          disname="Elon Muskr"
+          tag="elonmusk"
+          link="https://twitter.com/elonmusk"
+        />
+
+        <Follow
+          avatar="https://pbs.twimg.com/profile_images/669241201757786113/C3XX6cGE_400x400.png"
+          disname="Matt LeBlanc"
+          tag="Matt_LeBlanc"
+          link="https://twitter.com/matt_leblanc"
         />
         <Follow
-          avatar="https://pbs.twimg.com/profile_images/1660745906487185409/bpgD4hqR_400x400.jpg"
-          disname="DMRそPHOENIX"
-          tag="SalmanFarisAV1"
-          link="https://twitter.com/SalmanFarisAV1"
-        />
-        <Follow
-          avatar="https://pbs.twimg.com/profile_images/1562753500726976514/EPSUNyR3_400x400.jpg"
-          disname="Virat Kohli"
-          tag="imVkohli"
-          link="https://twitter.com/imVkohli"
-        />
-        <Follow
-          avatar="https://i.ibb.co/xXKPyvQ/jv.jpg"
+          avatar="https://i.ibb.co/sCKwVYD/Whats-App-Image-2023-05-26-at-00-19-35-dp.jpg"
           disname="Jishnu Vijayan"
           tag="JishnuVijayan03"
           link="https://twitter.com/JishnuVijayan03"
+        />
+        <Follow
+          avatar="https://pbs.twimg.com/profile_images/1496734873133924353/XcjkhMaj_400x400.jpg"
+          disname="AB de Villiers"
+          tag="ABdeVilliers17"
+          link="https://twitter.com/ABdeVilliers17"
+        />
+
+        <Follow
+          avatar="https://pbs.twimg.com/profile_images/1178987041209454594/uhPst1AS_400x400.jpg"
+          disname="Sunny Leone"
+          tag="SunnyLeone"
+          link="https://twitter.com/SunnyLeone"
         />
         <Button className="bh5">
           <h5>Show more</h5>

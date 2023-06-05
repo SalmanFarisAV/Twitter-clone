@@ -30,7 +30,11 @@ function Bookmarkwidget() {
           tag="#BalasoreTrainTragedy"
           tweet="13.3K Tweets"
         />
-        <Trending head="Trending in India" tag="मनीष कश्यप" tweet="13.2K Tweets" />
+        <Trending
+          head="Trending in India"
+          tag="मनीष कश्यप"
+          tweet="13.2K Tweets"
+        />
         <Button className="bh5">
           <h5>Show more</h5>
         </Button>
@@ -38,28 +42,34 @@ function Bookmarkwidget() {
       <div className="widgets__container">
         <h2 className="h2">Who to Follow </h2>
         <Follow
-          avatar="https://pbs.twimg.com/profile_images/1286687023185592320/Q1r6FSus_400x400.jpg"
-          disname="Suriya Sivakumar"
-          tag="Suriya_offl"
-          link="https://twitter.com/Suriya_offl"
+          avatar="https://pbs.twimg.com/profile_images/1631922736959475713/P543dkC5_400x400.jpg"
+          disname="ksi"
+          tag="KSI"
+          link="https://twitter.com/KSI"
         />
         <Follow
-          avatar="https://pbs.twimg.com/profile_images/1660745906487185409/bpgD4hqR_400x400.jpg"
-          disname="DMRそPHOENIX"
-          tag="SalmanFarisAV1"
-          link="https://twitter.com/SalmanFarisAV1"
+          avatar="https://pbs.twimg.com/profile_images/1665778585129603072/SUzJ-zWL_400x400.jpg"
+          disname="nikhilraj"
+          tag="rajnikhil343"
+          link="https://twitter.com/rajnikhil343"
         />
         <Follow
-          avatar="https://pbs.twimg.com/profile_images/1562753500726976514/EPSUNyR3_400x400.jpg"
-          disname="Virat Kohli"
-          tag="imVkohli"
-          link="https://twitter.com/imVkohli"
+          avatar="https://pbs.twimg.com/profile_images/1140596536205877248/2UYQ4X8a_400x400.jpg"
+          disname="Sidemen"
+          tag="Sidemen"
+          link="https://twitter.com/Sidemen"
         />
         <Follow
-          avatar="https://i.ibb.co/xXKPyvQ/jv.jpg"
-          disname="Jishnu Vijayan"
-          tag="JishnuVijayan03"
-          link="https://twitter.com/JishnuVijayan03"
+          avatar="https://pbs.twimg.com/profile_images/1661932557133307907/WG7zbT8u_400x400.jpg"
+          disname="RAE"
+          tag="Valkyrae"
+          link="https://twitter.com/Valkyrae"
+        />
+        <Follow
+          avatar="https://pbs.twimg.com/profile_images/1611332347470692353/h5JnKeil_400x400.jpg"
+          disname="Leo Messi"
+          tag="imessi"
+          link="https://twitter.com/imessi"
         />
         <Button className="bh5">
           <h5>Show more</h5>
