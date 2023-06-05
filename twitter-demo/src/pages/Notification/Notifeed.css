@@ -1,0 +1,4 @@
+.notifeed{
+    flex: 0.6 !important;
+    border-right: 1px solid var(--twitter-background);
+}

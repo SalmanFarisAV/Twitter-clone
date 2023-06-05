@@ -1,0 +1,9 @@
+.Notiwid{
+    flex: 0.4 !important;
+    min-width: fit-content;
+    overflow-y: scroll;
+}
+
+.Notiwid::-webkit-scrollbar{
+    display: none;
+}
